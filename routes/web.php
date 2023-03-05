@@ -17,6 +17,7 @@ use App\Http\Controllers\AdminController;
 
 Route::get('/',[HomeController::class,'index']);
 Route::get('/home',[HomeController::class,'redirect']);
+Route::get('/test',[HomeController::class,'test']);
 
 Route::middleware([
     'auth:sanctum',
@@ -30,3 +31,5 @@ Route::middleware([
 
 Route::get('/add_doctor_view',[AdminController::class,'addview']);
 Route::post('/upload_doctor',[AdminController::class,'upload']);
+Route::post('/appointment',[HomeController::class,'appointment']);
+
