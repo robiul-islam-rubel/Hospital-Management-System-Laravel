@@ -1,4 +1,3 @@
-use Illuminate\Support\Facades\Auth;
 <header>
     <div class="topbar">
       <div class="container">
@@ -56,18 +55,9 @@ use Illuminate\Support\Facades\Auth;
             <li class="nav-item">
               <a class="nav-link" href="contact.html">Contact</a>
             </li>
-            @if(Route::has('login'))
-
-            @auth
             <li class="nav-item">
-              <a class="nav-link" style="background-color:greenyellow;color:white" href="contact.html">My Appointment</a>
-
+              <a class="btn btn-primary ml-lg-3" style="background-color:green" href="{{url('myappointment')}}">My Appointment</a>
             </li>
-            <x-app-layout>
-                
-            </x-app-layout>
-
-           @else
             <li class="nav-item">
               <a class="btn btn-primary ml-lg-3" href="{{route('login')}}">Login</a>
             </li>
